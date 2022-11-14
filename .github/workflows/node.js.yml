@@ -22,4 +22,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - run: /home/runner/work
+    - run: cd /home/runner/work && ls -la
+    - run: uptime
