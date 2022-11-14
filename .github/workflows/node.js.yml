@@ -23,4 +23,15 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - run: cd /home/runner/work && ls -la
-    - run: uptime
+    - name: Upload output file
+      uses: actions/upload-artifact@v3
+      with:
+          name: git-hub-actions-file
+          path: git-hub-actions
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: git-hub-actions-file
