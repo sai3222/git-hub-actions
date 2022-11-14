@@ -27,7 +27,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: git-hub-actions-file
-          path: git-hub-actions
+          path: /home/runner/work/git-hub-actions
   example-job:
     runs-on: ubuntu-latest
     steps:
